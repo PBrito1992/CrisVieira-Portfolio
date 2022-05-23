@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .scrollbar {
+    /* width */
+    &::-webkit-scrollbar {
+      @apply w-2;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      @apply rounded-lg shadow-red;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      @apply rounded-lg bg-gray-300;
+    }
+
+    &-hidden {
+      &::-webkit-scrollbar {
+        @apply w-0;
+      }
+    }
+  }
+
+  .context-box-animation {
+    @apply relative transition-all before:absolute before:top-0 before:left-0 before:-z-10 before:h-full before:w-full before:rounded-lg before:bg-brand-hover before:opacity-0 before:transition-all hover:-translate-y-1 hover:before:opacity-100;
+  }
+}
+
+* {
+  scroll-behavior: smooth;
+}
