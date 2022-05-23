@@ -41,7 +41,7 @@ const Intro: FC = () => {
             Welcome to my world
           </SectionTitle>
           <h1 className="mt-4 text-3xl font-bold text-white lg:text-5xl">
-            Hi, I'm <span className="text-pink-700">Cristiana Vieira</span>
+            {"Hi, I'm"} <span className="text-pink-700">Cristiana Vieira</span>
           </h1>
           <div className="mt-2 flex items-center gap-2 text-2xl font-bold text-white lg:text-4xl">
             a{" "}
