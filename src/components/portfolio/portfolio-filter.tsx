@@ -21,7 +21,7 @@ const PortfolioFilter = ({
   setSelectedFilter,
 }: PortfolioFilterType) => {
   return (
-    <ContextBox className="z-10 w-full lg:sticky lg:top-header-height lg:w-auto">
+    <ContextBox className="w-full lg:sticky lg:top-header-height lg:z-10 lg:w-auto">
       {Object.entries(PortfolioFilters).map(([key, filter]) => (
         <FilterItem
           key={key}

@@ -1,10 +1,10 @@
 import Icon from "components/common/icons";
 import { useAppContext } from "context/app-context";
-import Link from "next/link";
 import { FC, useEffect, useState } from "react";
 import HeaderItem, { HeaderItemType } from "./header-item";
+import HeaderMobileMenu from "./header-mobile-menu";
 
-const HeaderItems: HeaderItemType[] = [
+export const HeaderItems: HeaderItemType[] = [
   {
     text: "Home",
     linkRef: "#home",
@@ -30,6 +30,7 @@ const HeaderItems: HeaderItemType[] = [
 const Header: FC = () => {
   const { layoutRef } = useAppContext();
   const [isOnTop, setIsOnTop] = useState(true);
+  const [displayMenu, setDisplayMenu] = useState(false);
 
   const updateHeader = () => {
     if (!layoutRef?.current) return;
@@ -62,9 +63,12 @@ const Header: FC = () => {
           <HeaderItem key={item.text} {...item} />
         ))}
       </nav>
-      <span className="lg:hidden">
+      <span className="lg:hidden" onClick={() => setDisplayMenu(true)}>
         <Icon icon="burger" w={42} h={42} color="#be185d" />
       </span>
+      {displayMenu && (
+        <HeaderMobileMenu onClose={() => setDisplayMenu(false)} />
+      )}
     </header>
   );
 };

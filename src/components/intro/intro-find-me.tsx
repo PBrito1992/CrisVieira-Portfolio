@@ -15,18 +15,15 @@ const IntroFindMe = () => (
           </ContextBox>
         </a>
       </Link>
-      <Link
-        href="https://www.linkedin.com/in/cristianavieira2403/"
-        target="_blank"
-      >
-        <a>
+      <Link href="https://www.instagram.com/crisfnvieira/">
+        <a target="_blank">
           <ContextBox className="context-box-animation flex h-12 w-12 cursor-pointer items-center justify-center lg:h-16 lg:w-16">
             <Icon icon="instagram" w={18} h={18} color="currentColor" />
           </ContextBox>
         </a>
       </Link>
-      <Link href="" target="_blank">
-        <a>
+      <Link href="https://www.linkedin.com/in/cristianavieira2403/">
+        <a target="_blank">
           <ContextBox className="context-box-animation flex h-12 w-12 cursor-pointer items-center justify-center lg:h-16 lg:w-16">
             <Icon icon="linkedin" w={18} h={18} color="currentColor" />
           </ContextBox>
