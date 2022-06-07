@@ -15,7 +15,7 @@ const Features: FC = () => {
   return (
     <div
       id="features"
-      className="mx-auto h-auto w-full border-b-2 border-gray-900 px-5 py-10 lg:h-screen lg:w-5/6 lg:py-28 lg:px-0"
+      className="mx-auto h-auto w-full border-b-2 border-gray-900 px-5 py-10 lg:min-h-screen lg:w-5/6 lg:py-28 lg:px-0"
     >
       <SectionTitle className="text-pink-700">Features</SectionTitle>
       <SectionTitleHighlighted className="mt-3 text-gray-300">

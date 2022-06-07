@@ -7,7 +7,7 @@ export type ResumeListItemType = {
     start: string;
     end?: string;
   };
-  description?: string;
+  description?: string[];
   grade?: string;
 };
 
@@ -32,8 +32,14 @@ const ResumeListItem = ({
       >
         {location}
       </div>
-      {description && (
-        <div className="mt-2 text-sm text-gray-400">{description}</div>
+      {description && description.length > 0 && (
+        <ul className="ml-6 list-disc">
+          {description.map((item) => (
+            <li key={item} className="mt-2 text-sm text-gray-400">
+              {item}
+            </li>
+          ))}
+        </ul>
       )}
       <div className="mt-6 text-sm text-gray-400">
         {duration.start} - {duration.end || "Current"}

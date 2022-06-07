@@ -65,7 +65,7 @@ const features: FeatureType[] = [
         },
         title: "Social Networks Management",
         description:
-            "Planning, analyzing and managing content created on a single platform can save a lot of time. Tools like Swonkie, Etus and Meta Business Suite help a content creator schedule posts for clients' social networks.",
+            "Planning, analyzing and managing content created on a single platform can save a lot of time. Tools like Swonkie, Etus and Meta Business Suite help a content creator to schedule posts for clients' social networks.",
     }
 ];
 

@@ -22,51 +22,50 @@ const ResumeInfo: ResumeInfoType = {
             title: "Marketing Assistant - Internship",
             location: "Up We Go- Agência de Marketing Digital",
             duration: { start: "Fevereiro 2022", end: "Maio 2022" },
-            description: `
-            Management of Social Networks like Facebook, LinkedIn and Instagram (Swonkie and Meta Business Suite)
-            Content Writing (Blog Posts, Websites, Posts For Social Networks, Magazines, Ebooks, Brochures, Formal Documents For Clients)
-            Competition Analysis 
-            Benchmarking
-            Usability Tests (Mobile & Desktop)
-            Implementation Of Content On The Website (WordPress)
-            Newsletters functionality tests
-        `,
+            description: [
+            'Social Networks Management for Facebook, LinkedIn and Instagram (Swonkie and Meta Business Suite)',
+            'Content Writing (Blog Posts, Websites, Posts For Social Networks, Magazines, Ebooks, Brochures, Formal Documents For Clients)',
+            'Competition Analysis',
+            'Benchmarking',
+            'Usability Tests (Mobile & Desktop)',
+            'Implementation Of Content On The Website (WordPress)',
+            'Newsletters functionality tests'
+            ]
         },
         {
             title: "Dental Assistant",
             location: "O Meu Sorriso Clínicas",
             duration: { start: "Agosto 2018", end: "Agosto 2019" },
-            description: `
-            Appointment booking
-            Stock management of dental materials
-            Cleaning of spaces
-            Sterilization of materials
-            Face-to-face and telephone customer service
-            Assisting dentists in dental treatments and surgeries
-            `
+            description: [
+            'Appointment booking',
+            'Stock management of dental materials',
+            'Cleaning of spaces',
+            'Sterilization of materials',
+            'Face-to-face and telephone customer service',
+            'Assisting dentists in dental treatments and surgeries'
+            ]
         },
         {
             title: "Healthcare Assistant - Internship",
             location: "Trofa Saúde - Hospital Privado de Alfena",
             duration: { start: "Abril 2018", end: "Junho 2018" },
-            description: `
-            Assistant in the health area in many specialties:
-            Obstetrics/gynecology, ophthalmology, otolaryngology, speech therapy, occupational therapy, child psychology, child and adolescent psychiatry, medical oncology, examination rooms and polysomnography rooms.
-            Functions such as cleaning spaces, managing stocks, scheduling appointments, accompanying the patient to the correct room, prepare the medical office for the next day (documents, clothing and materials), supporting doctors and ticket printing and resolution in the computer system.
-        `,
+            description: [
+            'Assistant in the health area in many specialties: Obstetrics/gynecology, ophthalmology, otolaryngology, speech therapy, occupational therapy, child psychology, child and adolescent psychiatry, medical oncology, examination rooms and polysomnography rooms.',
+            'Functions such as cleaning spaces, managing stocks, scheduling appointments, accompanying the patient to the correct room, prepare the medical office for the next day (documents, clothing and materials), supporting doctors and ticket printing and resolution in the computer system.'
+            ],
         },
         {
             title: "Healthcare Assitant - Internship",
             location: "Lar São Lourenço, Ermesinde, Técnica Auxiliar de Saúde",
             duration: { start: "Maio 2017", end: "Junho 2017" },
-            description: `
-            Assist patients in their hygiene care
-            Positioning patients correctly
-            Preparation of snacks for patients according to their diet
-            Helping patients in the feeding process
-            Hygienization of spaces
-            Creation of activities to work with patients during the day
-            `
+            description: [
+            'Assist patients in their hygiene care',
+            'Positioning patients correctly',
+            'Preparation of snacks for patients according to their diet',
+            'Helping patients in the feeding process',
+            'Hygienization of spaces',
+            'Creation of activities to work with patients during the day'
+            ]
         },
     ],
 };

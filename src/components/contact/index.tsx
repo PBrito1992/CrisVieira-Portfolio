@@ -26,8 +26,12 @@ const Contact: FC = () => {
             Marketeer
           </div>
           <div className="mt-3 text-base text-gray-400">
-          I am available to help you make your business explode in the digital or offline world, through all my knowledge, professionalism and relationship with the most diverse marketing tools.<br/><br/>
-          Connect with me through my social networks or call in to my phone number.
+            I am available to help you making your business explode in the
+            digital or offline world, through all my knowledge, professionalism
+            and relationship with the most diverse marketing tools.
+            <br />
+            <br />
+            Connect with me through my social networks or just give me a call.
           </div>
           <div className="mt-6 text-base">
             <span className="text-gray-400">Email:</span>{" "}
