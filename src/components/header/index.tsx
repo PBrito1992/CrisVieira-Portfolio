@@ -10,7 +10,7 @@ export const HeaderItems: HeaderItemType[] = [
     linkRef: "#home",
   },
   {
-    text: "Features",
+    text: "Skills",
     linkRef: "#features",
   },
   {
