@@ -2,6 +2,8 @@ import SectionTitle from "components/common/section-title";
 import { FC, useEffect, useState } from "react";
 import IntroFindMe from "./intro-find-me";
 import IntroSkills from "./intro-skills";
+import profilePicture from "../../../public/images/me.webp";
+import Image from "next/image";
 
 const JobDescriptionWidth = 175;
 
@@ -51,11 +53,11 @@ const Intro: FC = () => {
             <span className="inline-block h-9 w-1 bg-gray-500"></span>
           </div>
           <div className="mt-4 text-base text-gray-400 lg:text-xl">
-            I'm 22 years old and I consider myself an organized, committed,
-            empathetic and communicative person. I'm always looking for
+            {`I\'m 22 years old and I consider myself an organized, committed,
+            empathetic and communicative person. I\'m always looking for
             continuous improvement and personal development with focus on my
-            goals and aiming to achieve good results. I'm motivated to continue
-            self developing on either my personal and professional perspectives.
+            goals and aiming to achieve good results. I\'m motivated to continue
+            self developing on either my personal and professional perspectives.`}
           </div>
         </div>
         <div className="my-10 flex flex-col justify-between gap-5 lg:my-0 lg:flex-row lg:gap-0">
@@ -68,7 +70,7 @@ const Intro: FC = () => {
         </div>
       </div>
       <div className="order-1 w-full lg:order-2 lg:w-1/2">
-        <img src="/images/me.webp" alt="" />
+        <Image src={profilePicture} alt="" priority={true} />
       </div>
     </div>
   );
