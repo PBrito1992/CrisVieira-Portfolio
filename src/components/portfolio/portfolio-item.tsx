@@ -1,10 +1,13 @@
 import ContextBox from "components/common/context-box";
+import { StaticImageData } from "next/image";
 import { FC } from "react";
+import PortfolioCarousel from "./portfolio-carousel";
 
 export type PortfolioItemType = {
-  imgSrc: string;
-  imgAlt: string;
-  title: string;
+  imgSrc: StaticImageData[] | string[];
+  imgAlt?: string;
+  title?: string;
+  body?: string;
   onClick?: () => void;
 };
 
@@ -19,10 +22,10 @@ const PortfolioItem: FC<PortfolioItemType> = ({
       className="context-box-animation cursor-pointer p-10"
       onClick={onClick}
     >
-      <>
-        <img src={imgSrc} alt={imgAlt} className="rounded-lg" />
-        <div className="mt-3 text-xl font-semibold text-gray-300">{title}</div>
-      </>
+      <div onClick={(e) => e.stopPropagation()}>
+        <PortfolioCarousel images={imgSrc} />
+      </div>
+      <div className="mt-3 text-base font-semibold text-gray-300">{title}</div>
     </ContextBox>
   );
 };

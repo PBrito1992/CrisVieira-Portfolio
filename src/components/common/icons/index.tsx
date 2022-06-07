@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Burger from "./burger";
-import Facebook from "./facebook";
+import Pinterest from "./pinterest";
 import Instagram from "./instagram";
 import Linkedin from "./linkedin";
 import Times from "./times";
@@ -13,7 +13,7 @@ export type IconPropsType = {
 };
 
 const icons = {
-  facebook: Facebook,
+  pinterest: Pinterest,
   instagram: Instagram,
   linkedin: Linkedin,
   burger: Burger,

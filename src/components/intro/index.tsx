@@ -1,12 +1,9 @@
-import ContextBox from "components/common/context-box";
-import Icon from "components/common/icons";
 import SectionTitle from "components/common/section-title";
-import Link from "next/link";
 import { FC, useEffect, useState } from "react";
 import IntroFindMe from "./intro-find-me";
 import IntroSkills from "./intro-skills";
 
-const JobDescriptionWidth = 160;
+const JobDescriptionWidth = 175;
 
 const Intro: FC = () => {
   const [jobDescriptionWidth, setJobDescriptionWidth] =
@@ -18,7 +15,7 @@ const Intro: FC = () => {
       setJobDescriptionWidth((width) => {
         if (width > 0 && decrement) {
           return width - 2;
-        } else if (width < JobDescriptionWidth && !decrement) {
+        } else if (width <= JobDescriptionWidth && !decrement) {
           return width + 2;
         } else {
           decrement = !decrement;
@@ -54,9 +51,11 @@ const Intro: FC = () => {
             <span className="inline-block h-9 w-1 bg-gray-500"></span>
           </div>
           <div className="mt-4 text-base text-gray-400 lg:text-xl">
-            I use animation as a third dimension by which to simplify
-            experiences and kuiding thro each and every interaction. I’m not
-            adding motion just to spruce things up, but doing it in ways that.
+            I'm 22 years old and I consider myself an organized, committed,
+            empathetic and communicative person. I'm always looking for
+            continuous improvement and personal development with focus on my
+            goals and aiming to achieve good results. I'm motivated to continue
+            self developing on either my personal and professional perspectives.
           </div>
         </div>
         <div className="my-10 flex flex-col justify-between gap-5 lg:my-0 lg:flex-row lg:gap-0">

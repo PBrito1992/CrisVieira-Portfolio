@@ -3,10 +3,12 @@ import { Dispatch, SetStateAction } from "react";
 import FilterItem from "../common/filter-item";
 
 export const PortfolioFilters = {
-  javascript: "Javascript",
-  productDesign: "Product Design",
-  wordpress: "Wordpress",
-  python: "Python",
+  design: "Design",
+  photoEdition: "Photo Edition",
+  mockups: "Mockups",
+  logos: "Logos",
+  socialNetworks: "Social Networks",
+  blogPosts: "Blog Posts",
 };
 
 export type FiltersType = keyof typeof PortfolioFilters;

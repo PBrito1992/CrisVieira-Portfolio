@@ -1,9 +1,7 @@
 import ContextBox from "components/common/context-box";
-import Icon from "components/common/icons";
 import SectionTitle from "components/common/section-title";
 import SectionTitleHighlighted from "components/common/section-title-highlighted";
 import IntroFindMe from "components/intro/intro-find-me";
-import Link from "next/link";
 import { FC } from "react";
 
 const Contact: FC = () => {
@@ -28,8 +26,8 @@ const Contact: FC = () => {
             Marketeer
           </div>
           <div className="mt-3 text-base text-gray-400">
-            I am available for freelance work. Connect with me via and call in
-            to my account.
+          I am available to help you make your business explode in the digital or offline world, through all my knowledge, professionalism and relationship with the most diverse marketing tools.<br/><br/>
+          Connect with me through my social networks or call in to my phone number.
           </div>
           <div className="mt-6 text-base">
             <span className="text-gray-400">Email:</span>{" "}

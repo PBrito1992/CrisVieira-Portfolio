@@ -8,24 +8,24 @@ const IntroFindMe = () => (
       Find with me
     </div>
     <div className="mt-3 flex gap-3">
-      <Link href="" target="_blank">
-        <a>
+      <Link href="https://www.pinterest.pt/ascrisfnvieira">
+        <a target="_blank">
           <ContextBox className="context-box-animation flex h-12 w-12 cursor-pointer items-center justify-center lg:h-16 lg:w-16">
-            <Icon icon="facebook" w={18} h={18} color="currentColor" />
+            <Icon icon="pinterest" w={24} h={24} color="currentColor" />
           </ContextBox>
         </a>
       </Link>
       <Link href="https://www.instagram.com/crisfnvieira/">
         <a target="_blank">
           <ContextBox className="context-box-animation flex h-12 w-12 cursor-pointer items-center justify-center lg:h-16 lg:w-16">
-            <Icon icon="instagram" w={18} h={18} color="currentColor" />
+            <Icon icon="instagram" w={24} h={24} color="currentColor" />
           </ContextBox>
         </a>
       </Link>
       <Link href="https://www.linkedin.com/in/cristianavieira2403/">
         <a target="_blank">
           <ContextBox className="context-box-animation flex h-12 w-12 cursor-pointer items-center justify-center lg:h-16 lg:w-16">
-            <Icon icon="linkedin" w={18} h={18} color="currentColor" />
+            <Icon icon="linkedin" w={24} h={24} color="currentColor" />
           </ContextBox>
         </a>
       </Link>

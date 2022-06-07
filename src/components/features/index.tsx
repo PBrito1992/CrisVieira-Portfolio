@@ -3,81 +3,13 @@ import Icon, { IconPropsType } from "components/common/icons";
 import SectionTitle from "components/common/section-title";
 import SectionTitleHighlighted from "components/common/section-title-highlighted";
 import { FC } from "react";
+import features from "../../../content/features";
 
-type FeatureType = {
+export type FeatureType = {
   iconInfo: IconPropsType;
   title: string;
   description: string;
 };
-
-const features: FeatureType[] = [
-  {
-    iconInfo: {
-      icon: "burger",
-      w: 48,
-      h: 48,
-      color: "#be185d",
-    },
-    title: "CEO Marketing",
-    description:
-      "I throw myself down among the tall grass by the stream as I lie close to the earth.",
-  },
-  {
-    iconInfo: {
-      icon: "burger",
-      w: 48,
-      h: 48,
-      color: "#be185d",
-    },
-    title: "CEO Marketing",
-    description:
-      "I throw myself down among the tall grass by the stream as I lie close to the earth.",
-  },
-  {
-    iconInfo: {
-      icon: "burger",
-      w: 48,
-      h: 48,
-      color: "#be185d",
-    },
-    title: "CEO Marketing",
-    description:
-      "I throw myself down among the tall grass by the stream as I lie close to the earth.",
-  },
-  {
-    iconInfo: {
-      icon: "burger",
-      w: 48,
-      h: 48,
-      color: "#be185d",
-    },
-    title: "CEO Marketing",
-    description:
-      "I throw myself down among the tall grass by the stream as I lie close to the earth.",
-  },
-  {
-    iconInfo: {
-      icon: "burger",
-      w: 48,
-      h: 48,
-      color: "#be185d",
-    },
-    title: "CEO Marketing",
-    description:
-      "I throw myself down among the tall grass by the stream as I lie close to the earth.",
-  },
-  {
-    iconInfo: {
-      icon: "burger",
-      w: 48,
-      h: 48,
-      color: "#be185d",
-    },
-    title: "CEO Marketing",
-    description:
-      "I throw myself down among the tall grass by the stream as I lie close to the earth.",
-  },
-];
 
 const Features: FC = () => {
   return (

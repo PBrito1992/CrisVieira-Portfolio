@@ -28,6 +28,7 @@ module.exports = {
         "header-height": "104px",
         "intro-minus-header": "calc(100% - 104px)",
         "mobile-menu-body-minus-header": "calc(100% - 64px)",
+        "90vh": "90vh",
       },
       inset: {
         unset: "unset",
@@ -37,6 +38,11 @@ module.exports = {
           "0%": { transform: "translateX(-100%)", opacity: 0 },
           "100%": { transform: "translateX(0)", opacity: 1 },
         },
+      },
+      maxHeight: {
+        "90vh": "90vh",
+        "90vh-minus-padding": "calc(90vh - 80px)",
+        none: "none",
       },
       spacing: {
         "header-height": "136px",

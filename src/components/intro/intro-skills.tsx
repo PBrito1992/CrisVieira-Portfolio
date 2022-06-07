@@ -8,23 +8,23 @@ const IntroSkills = () => (
     <div className="mt-3 flex gap-3">
       <ContextBox className="flex h-12 w-12 items-center justify-center lg:h-16 lg:w-16">
         <img
-          className="w-5"
-          src="https://rainbowit.net/html/inbio/assets/images/icons/icons-01.png"
+          className="w-6"
+          src="/images/AdobeI.png"
           alt=""
         />
       </ContextBox>
       <ContextBox className="flex h-12 w-12 items-center justify-center lg:h-16 lg:w-16">
         <img
-          className="w-5"
-          src="https://rainbowit.net/html/inbio/assets/images/icons/icons-02.png"
+          className="w-6"
+          src="/images/AdobeP.png"
           alt=""
         />
       </ContextBox>
       <ContextBox className="flex h-12 w-12 items-center justify-center lg:h-16 lg:w-16">
         <img
-          src="https://rainbowit.net/html/inbio/assets/images/icons/icons-03.png"
+          src="/images/Canva.png"
           alt=""
-          className="w-5"
+          className="w-6"
         />
       </ContextBox>
     </div>

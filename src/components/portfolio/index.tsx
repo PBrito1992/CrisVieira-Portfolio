@@ -1,6 +1,7 @@
 import SectionTitle from "components/common/section-title";
 import SectionTitleHighlighted from "components/common/section-title-highlighted";
 import { FC, useState } from "react";
+import portfolioItems from "../../../content/portfolio";
 import PortfolioFilter, {
   FiltersType,
   PortfolioFilters,
@@ -10,127 +11,13 @@ import PortfolioItemPopup, {
   PortfolioItemPopupType,
 } from "./portfolio-item-popup";
 
-type PortfolioItem = {
+export type PortfolioItem = {
   filterId: FiltersType;
   items: PortfolioItemType[];
 };
 
-const portfolioItems: PortfolioItem[] = [
-  {
-    filterId: "javascript",
-    items: [
-      {
-        imgSrc:
-          "https://rainbowit.net/html/inbio/assets/images/portfolio/portfolio-01.jpg",
-        imgAlt: "image test",
-        title: "The services provide for design",
-      },
-      {
-        imgSrc:
-          "https://rainbowit.net/html/inbio/assets/images/portfolio/portfolio-01.jpg",
-        imgAlt: "image test",
-        title: "The services provide for design",
-      },
-      {
-        imgSrc:
-          "https://rainbowit.net/html/inbio/assets/images/portfolio/portfolio-01.jpg",
-        imgAlt: "image test",
-        title: "The services provide for design",
-      },
-      {
-        imgSrc:
-          "https://rainbowit.net/html/inbio/assets/images/portfolio/portfolio-01.jpg",
-        imgAlt: "image test",
-        title: "The services provide for design",
-      },
-    ],
-  },
-  {
-    filterId: "productDesign",
-    items: [
-      {
-        imgSrc:
-          "https://rainbowit.net/html/inbio/assets/images/portfolio/portfolio-02.jpg",
-        imgAlt: "image test",
-        title: "Mobile app landing design & app maintain",
-      },
-      {
-        imgSrc:
-          "https://rainbowit.net/html/inbio/assets/images/portfolio/portfolio-02.jpg",
-        imgAlt: "image test",
-        title: "Mobile app landing design & app maintain",
-      },
-    ],
-  },
-  {
-    filterId: "wordpress",
-    items: [
-      {
-        imgSrc:
-          "https://rainbowit.net/html/inbio/assets/images/portfolio/portfolio-03.jpg",
-        imgAlt: "image test",
-        title: "Logo design creativity & Application",
-      },
-    ],
-  },
-  {
-    filterId: "python",
-    items: [
-      {
-        imgSrc:
-          "https://rainbowit.net/html/inbio/assets/images/portfolio/portfolio-04.jpg",
-        imgAlt: "image test",
-        title: "Mobile app landing design & services",
-      },
-      {
-        imgSrc:
-          "https://rainbowit.net/html/inbio/assets/images/portfolio/portfolio-04.jpg",
-        imgAlt: "image test",
-        title: "Mobile app landing design & services",
-      },
-      {
-        imgSrc:
-          "https://rainbowit.net/html/inbio/assets/images/portfolio/portfolio-04.jpg",
-        imgAlt: "image test",
-        title: "Mobile app landing design & services",
-      },
-      {
-        imgSrc:
-          "https://rainbowit.net/html/inbio/assets/images/portfolio/portfolio-04.jpg",
-        imgAlt: "image test",
-        title: "Mobile app landing design & services",
-      },
-      {
-        imgSrc:
-          "https://rainbowit.net/html/inbio/assets/images/portfolio/portfolio-04.jpg",
-        imgAlt: "image test",
-        title: "Mobile app landing design & services",
-      },
-      {
-        imgSrc:
-          "https://rainbowit.net/html/inbio/assets/images/portfolio/portfolio-04.jpg",
-        imgAlt: "image test",
-        title: "Mobile app landing design & services",
-      },
-      {
-        imgSrc:
-          "https://rainbowit.net/html/inbio/assets/images/portfolio/portfolio-04.jpg",
-        imgAlt: "image test",
-        title: "Mobile app landing design & services",
-      },
-      {
-        imgSrc:
-          "https://rainbowit.net/html/inbio/assets/images/portfolio/portfolio-04.jpg",
-        imgAlt: "image test",
-        title: "Mobile app landing design & services",
-      },
-    ],
-  },
-];
-
 const Portfolio: FC = () => {
-  const [selectedFilter, setSelectedFilter] =
-    useState<FiltersType>("javascript");
+  const [selectedFilter, setSelectedFilter] = useState<FiltersType>("design");
   const [selectedItem, setSelectedItem] =
     useState<PortfolioItemPopupType | null>(null);
 
@@ -165,7 +52,7 @@ const Portfolio: FC = () => {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {portfolioItemsToDisplay?.items?.map((item, index) => (
             <PortfolioItem
-              key={`${item.title}-${index}`}
+              key={`${portfolioItemsToDisplay.filterId}-${index}`}
               imgSrc={item.imgSrc}
               imgAlt={item.imgAlt}
               title={item.title}
