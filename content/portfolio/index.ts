@@ -1,6 +1,8 @@
 import { PortfolioItem } from "components/portfolio";
 import blogPostsItems from "./blog-posts";
+import brochureItems from "./brochure";
 import designItems from "./design";
+import ebookItems from "./ebook";
 import logosItems from "./logos";
 import mockupsItems from "./mockups";
 import photoEditionItems from "./photo-edition";
@@ -30,6 +32,12 @@ const portfolioItems: PortfolioItem[] = [
     {
         filterId: "blogPosts",
         items: blogPostsItems
+    }, {
+        filterId: "ebooks",
+        items: ebookItems
+    }, {
+        filterId: "brochures",
+        items: brochureItems
     },
 ];
 

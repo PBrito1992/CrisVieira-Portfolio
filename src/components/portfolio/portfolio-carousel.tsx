@@ -1,7 +1,10 @@
 import Image, { StaticImageData } from "next/image";
 import { FC } from "react";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 type PortfolioCarouselType = {
   images: StaticImageData[] | string[];
@@ -13,16 +16,22 @@ const PortfolioCarousel: FC<PortfolioCarouselType> = ({ images }) => {
   }
 
   return (
-    <Carousel
-      showArrows={true}
-      showThumbs={false}
-      showStatus={false}
-      showIndicators={images.length > 1}
+    <Swiper
+      pagination={{
+        clickable: true,
+      }}
+      hashNavigation={{
+        watchState: true,
+      }}
+      navigation={true}
+      modules={[Pagination, Navigation]}
     >
       {images.map((image, index) => (
-        <Image key={image.toString()} src={image} alt="" priority={true} />
+        <SwiperSlide key={image.toString() + index}>
+          <Image src={image} alt="" priority={true} />
+        </SwiperSlide>
       ))}
-    </Carousel>
+    </Swiper>
   );
 };
 

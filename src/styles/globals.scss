@@ -6,17 +6,17 @@
   .scrollbar {
     /* width */
     &::-webkit-scrollbar {
-      @apply w-2;
+      @apply w-1;
     }
 
     /* Track */
     &::-webkit-scrollbar-track {
-      @apply rounded-lg shadow-red;
+      @apply rounded-lg;
     }
 
     /* Handle */
     &::-webkit-scrollbar-thumb {
-      @apply rounded-lg bg-gray-300;
+      @apply rounded-lg bg-gray-100;
     }
 
     &-hidden {
@@ -33,4 +33,57 @@
 
 * {
   scroll-behavior: smooth;
+}
+div.react-select {
+  &__single-value {
+    @apply text-pink-700;
+  }
+
+  &__control {
+    @apply border-white border-opacity-10 bg-portfolio-bg px-2 py-3 text-pink-700 shadow-none outline-none ring-white ring-opacity-30;
+
+    &--is-focused,
+    &--is-selected,
+    &--menu-is-open,
+    &:hover {
+      @apply border-white border-opacity-30 shadow-none ring-white ring-opacity-30;
+    }
+  }
+
+  &__menu {
+    @apply bg-portfolio-bg text-gray-300;
+  }
+
+  &__menu-list {
+    @extend .scrollbar;
+  }
+  &__option {
+    &:hover,
+    &--is-focused {
+      @apply bg-transparent text-pink-700;
+    }
+
+    &--is-selected,
+    &--is-selected:hover {
+      @apply bg-white bg-opacity-10 text-gray-300;
+    }
+  }
+}
+.swiper-pagination-bullet-active {
+  background-color: rgb(190 24 93) !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  opacity: 0 !important;
+  color: rgb(190 24 93) !important;
+}
+
+.swiper {
+  &:hover {
+    .swiper-button-next:not(.swiper-button-disabled),
+    .swiper-button-prev:not(.swiper-button-disabled) {
+      opacity: 1 !important;
+    }
+  }
 }

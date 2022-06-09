@@ -49,7 +49,7 @@ const Portfolio: FC = () => {
           selectedFilter={selectedFilter}
           setSelectedFilter={setSelectedFilter}
         />
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <div className="grid w-full grid-cols-1 gap-8 lg:w-4/5 lg:grid-cols-3">
           {portfolioItemsToDisplay?.items?.map((item, index) => (
             <PortfolioItem
               key={`${portfolioItemsToDisplay.filterId}-${index}`}

@@ -29,6 +29,7 @@ module.exports = {
         "intro-minus-header": "calc(100% - 104px)",
         "mobile-menu-body-minus-header": "calc(100% - 64px)",
         "90vh": "90vh",
+        "portfolio-popup-body-minus-header": "calc(100% - 52px)",
       },
       inset: {
         unset: "unset",
@@ -39,10 +40,14 @@ module.exports = {
           "100%": { transform: "translateX(0)", opacity: 1 },
         },
       },
+      maxWidth: {
+        "portfolio-popup-body-minus-header": "calc(100% - 52px)",
+      },
       maxHeight: {
         "90vh": "90vh",
         "90vh-minus-padding": "calc(90vh - 80px)",
         none: "none",
+        "portfolio-popup-body-minus-header": "calc(100% - 52px)",
       },
       spacing: {
         "header-height": "136px",

@@ -1,6 +1,6 @@
 import ContextBox from "components/common/context-box";
 import { Dispatch, SetStateAction } from "react";
-import FilterItem from "../common/filter-item";
+import Select from "react-select";
 
 export const PortfolioFilters = {
   design: "Design",
@@ -9,7 +9,14 @@ export const PortfolioFilters = {
   logos: "Logos",
   socialNetworks: "Social Networks",
   blogPosts: "Blog Posts",
+  ebooks: "Ebooks",
+  brochures: "Brochures",
 };
+
+const filterOptions = Object.entries(PortfolioFilters).map(([key, filter]) => ({
+  label: filter,
+  value: key,
+}));
 
 export type FiltersType = keyof typeof PortfolioFilters;
 
@@ -23,15 +30,21 @@ const PortfolioFilter = ({
   setSelectedFilter,
 }: PortfolioFilterType) => {
   return (
-    <ContextBox className="w-full lg:sticky lg:top-header-height lg:z-10 lg:w-auto">
-      {Object.entries(PortfolioFilters).map(([key, filter]) => (
-        <FilterItem
-          key={key}
-          isSelected={key === selectedFilter}
-          onClick={() => setSelectedFilter(key as FiltersType)}
-          text={filter}
-        />
-      ))}
+    <ContextBox className="w-full lg:sticky lg:top-header-height lg:z-10 lg:w-1/5">
+      <Select
+        instanceId="portfolio-filter"
+        className="w-full"
+        classNamePrefix="react-select"
+        isSearchable={false}
+        value={filterOptions.find((val) => val.value === selectedFilter)}
+        options={filterOptions}
+        onChange={(val) => setSelectedFilter(val?.value as FiltersType)}
+        components={{ IndicatorSeparator: () => null }}
+        styles={{
+          menuPortal: (provided) => ({ ...provided, zIndex: 10 }),
+          menu: (provided) => ({ ...provided, zIndex: 10 }),
+        }}
+      />
     </ContextBox>
   );
 };
