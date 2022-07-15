@@ -7,8 +7,8 @@ const ResumeInfo: ResumeInfoType = {
             title: "Degree in Marketing and Advertising",
             location:
                 "ISCET, Instituto Superior de Ciências Empresariais e do Turismo",
-            duration: { start: "2019" },
-            grade: "Current grade: 16",
+            duration: { start: "2019", end: "2022" },
+            grade: "Final grade: 16",
         },
         {
             title: "Healthcare Assistant - Professional Course",
