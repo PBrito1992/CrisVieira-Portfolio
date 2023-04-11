@@ -23,7 +23,7 @@ const Contact: FC = () => {
         <div className="text-xl font-semibold text-gray-300">
           <div className="text-2xl lg:text-4xl">Cristiana Vieira</div>
           <div className="mt-3 text-xl text-gray-400 lg:text-2xl">
-            Marketeer
+            Digital Marketeer
           </div>
           <div className="mt-3 text-base text-gray-400">
             I am available to help you making your business explode in the
@@ -31,7 +31,7 @@ const Contact: FC = () => {
             and relationship with the most diverse marketing tools.
             <br />
             <br />
-            Connect with me through my social networks or just give me a call.
+            Connect with me through my social networks or send me an email.
           </div>
           <div className="mt-6 text-base">
             <span className="text-gray-400">Email:</span>{" "}

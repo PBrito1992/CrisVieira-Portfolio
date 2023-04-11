@@ -4,6 +4,11 @@ import { ResumeFilters } from "components/resume/resume-filter";
 const ResumeInfo: ResumeInfoType = {
     [ResumeFilters.education.toLowerCase()]: [
         {
+            title: "Digital Marketing & Strategy Course",
+            location:
+                "EDIT.- Disruptive Digital Education",
+            duration: { start: "March 2023", end: "July 2023" },
+        }, {
             title: "Degree in Marketing and Advertising",
             location:
                 "ISCET, Instituto Superior de Ciências Empresariais e do Turismo",
@@ -19,6 +24,21 @@ const ResumeInfo: ResumeInfoType = {
     ],
     [ResumeFilters.experience.toLowerCase()]: [
         {
+            title: "Head of Digital Marketing",
+            location: "GUIPER, Porto",
+            duration: { start: "September 2022", end: "Present" },
+            description: [
+                'Monitor and identify market trends and opportunities',
+                'Implementation of the graphic materials ',
+                'Define and implement digital marketing communication strategies',
+                'Ensuring the continuous quality, relevance and adequacy of the contents disclosed in the communication channels',
+                'Monitor results of all marketing activities',
+                'Plan, develop, implement and manage content for the digital channels Facebook, Instagram and LinkedIn',
+                'Benchmarking',
+                'Competition Analysis',
+                'Daily use of CRM (Hubspot),also providing training to the company\'s employees on the respective customer relationship management platform.'
+            ]
+        }, {
             title: "Marketing Assistant - Internship",
             location: "Up We Go- Agência de Marketing Digital",
             duration: { start: "Fevereiro 2022", end: "Maio 2022" },

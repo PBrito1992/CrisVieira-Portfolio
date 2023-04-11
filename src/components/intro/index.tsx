@@ -1,33 +1,17 @@
 import SectionTitle from "components/common/section-title";
-import { FC, useEffect, useState } from "react";
+import { FC, useMemo } from "react";
 import IntroFindMe from "./intro-find-me";
 import IntroSkills from "./intro-skills";
-import profilePicture from "../../../public/images/me.webp";
+import profilePicture from "../../../public/images/me.jpg";
 import Image from "next/image";
-
-const JobDescriptionWidth = 175;
+import dayjs from "dayjs";
+import Job from "./job";
 
 const Intro: FC = () => {
-  const [jobDescriptionWidth, setJobDescriptionWidth] =
-    useState(JobDescriptionWidth);
-
-  useEffect(() => {
-    let decrement = true;
-    const timeoutRef = setInterval(() => {
-      setJobDescriptionWidth((width) => {
-        if (width > 0 && decrement) {
-          return width - 2;
-        } else if (width <= JobDescriptionWidth && !decrement) {
-          return width + 2;
-        } else {
-          decrement = !decrement;
-          return width;
-        }
-      });
-    }, 15);
-
-    return () => clearTimeout(timeoutRef);
-  }, []);
+  const age = useMemo(
+    () => dayjs(new Date()).diff(new Date(2000, 2, 24), "years"),
+    []
+  );
 
   return (
     <div
@@ -43,17 +27,11 @@ const Intro: FC = () => {
             {"Hi, I'm"} <span className="text-pink-700">Cristiana Vieira</span>
           </h1>
           <div className="mt-2 flex items-center gap-2 text-2xl font-bold text-white lg:text-4xl">
-            a{" "}
-            <span
-              style={{ width: jobDescriptionWidth }}
-              className="overflow-hidden"
-            >
-              Marketeer
-            </span>
+            a <Job />
             <span className="inline-block h-9 w-1 bg-gray-500"></span>
           </div>
           <div className="mt-4 text-base text-gray-400 lg:text-xl">
-            {`I\'m 22 years old and I consider myself an organized, committed,
+            {`I\'m ${age} years old and I consider myself an organized, committed,
             empathetic and communicative person. I\'m always looking for
             continuous improvement and personal development with focus on my
             goals and aiming to achieve good results. I\'m motivated to continue
@@ -69,8 +47,14 @@ const Intro: FC = () => {
           </div>
         </div>
       </div>
-      <div className="order-1 w-full lg:order-2 lg:w-1/2">
-        <Image src={profilePicture} alt="" priority={true} />
+      <div className="relative order-1 flex h-[560px] w-full items-start justify-start lg:order-2 lg:w-1/2">
+        <Image
+          src={profilePicture}
+          alt=""
+          priority={true}
+          layout="fill"
+          objectFit="cover"
+        />
       </div>
     </div>
   );

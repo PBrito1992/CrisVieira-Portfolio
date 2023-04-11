@@ -1,5 +1,6 @@
 import Icon from "components/common/icons";
 import { useAppContext } from "context/app-context";
+import Image from "next/image";
 import { FC, useEffect, useState } from "react";
 import HeaderItem, { HeaderItemType } from "./header-item";
 import HeaderMobileMenu from "./header-mobile-menu";
@@ -55,8 +56,14 @@ const Header: FC = () => {
           : "fixed top-0 z-10 bg-portfolio-bg bg-opacity-90 shadow-xl"
       }`}
     >
-      <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full border-2 border-gray-400">
-        <img src="/images/me-face.JPG" alt="" />
+      <div className="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-full border-2 border-gray-400">
+        <Image
+          src="/images/me.jpg"
+          alt=""
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+        />
       </div>
       <nav className="hidden items-center gap-10 lg:flex">
         {HeaderItems.map((item) => (

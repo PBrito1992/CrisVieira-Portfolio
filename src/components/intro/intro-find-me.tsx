@@ -15,7 +15,7 @@ const IntroFindMe = () => (
           </ContextBox>
         </a>
       </Link>
-      <Link href="https://www.instagram.com/crisfnvieira/">
+      <Link href="https://www.instagram.com/cristianavieira.pt/">
         <a target="_blank">
           <ContextBox className="context-box-animation flex h-12 w-12 cursor-pointer items-center justify-center lg:h-16 lg:w-16">
             <Icon icon="instagram" w={24} h={24} color="currentColor" />
@@ -26,6 +26,13 @@ const IntroFindMe = () => (
         <a target="_blank">
           <ContextBox className="context-box-animation flex h-12 w-12 cursor-pointer items-center justify-center lg:h-16 lg:w-16">
             <Icon icon="linkedin" w={24} h={24} color="currentColor" />
+          </ContextBox>
+        </a>
+      </Link>
+      <Link href="https://www.facebook.com/profile.php?id=100086210201438">
+        <a target="_blank">
+          <ContextBox className="context-box-animation flex h-12 w-12 cursor-pointer items-center justify-center lg:h-16 lg:w-16">
+            <Icon icon="facebook" w={24} h={24} color="currentColor" />
           </ContextBox>
         </a>
       </Link>

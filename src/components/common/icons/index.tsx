@@ -4,6 +4,7 @@ import Pinterest from "./pinterest";
 import Instagram from "./instagram";
 import Linkedin from "./linkedin";
 import Times from "./times";
+import Facebook from "./facebook";
 
 export type IconPropsType = {
   icon: IconsType;
@@ -18,6 +19,7 @@ const icons = {
   linkedin: Linkedin,
   burger: Burger,
   times: Times,
+  facebook: Facebook,
 };
 
 type IconsType = keyof typeof icons;
