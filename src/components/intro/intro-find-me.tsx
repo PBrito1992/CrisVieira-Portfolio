@@ -8,7 +8,7 @@ const IntroFindMe = () => (
       Find with me
     </div>
     <div className="mt-3 flex gap-3">
-      <Link href="https://www.pinterest.pt/ascrisfnvieira">
+      <Link href="https://www.pinterest.pt/cristianavieirapt/">
         <a target="_blank">
           <ContextBox className="context-box-animation flex h-12 w-12 cursor-pointer items-center justify-center lg:h-16 lg:w-16">
             <Icon icon="pinterest" w={24} h={24} color="currentColor" />

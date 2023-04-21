@@ -2,7 +2,7 @@ import SectionTitle from "components/common/section-title";
 import { FC, useMemo } from "react";
 import IntroFindMe from "./intro-find-me";
 import IntroSkills from "./intro-skills";
-import profilePicture from "../../../public/images/me.jpg";
+import profilePicture from "images/me.jpg";
 import Image from "next/image";
 import dayjs from "dayjs";
 import Job from "./job";
@@ -50,6 +50,8 @@ const Intro: FC = () => {
       <div className="relative order-1 flex h-[560px] w-full items-start justify-start lg:order-2 lg:w-1/2">
         <Image
           src={profilePicture}
+          width={725}
+          height={560}
           alt=""
           priority={true}
           layout="fill"

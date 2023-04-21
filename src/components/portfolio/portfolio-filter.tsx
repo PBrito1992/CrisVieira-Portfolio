@@ -31,7 +31,11 @@ const PortfolioFilter = ({
 }: PortfolioFilterType) => {
   return (
     <ContextBox className="w-full lg:sticky lg:top-header-height lg:z-10 lg:w-1/5">
+      <label className="sr-only" htmlFor="portfolio-filter">
+        Portfolio Filter
+      </label>
       <Select
+        id="portfolio-filter"
         instanceId="portfolio-filter"
         className="w-full"
         classNamePrefix="react-select"

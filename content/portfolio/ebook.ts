@@ -1,23 +1,23 @@
 import { PortfolioItemType } from "components/portfolio/portfolio-item";
-import image1_1 from "../../public/images/ebook/1.1.jpg";
-import image1_2 from "../../public/images/ebook/1.2.jpg";
-import image1_3 from "../../public/images/ebook/1.3.jpg";
-import image1_4 from "../../public/images/ebook/1.4.jpg";
-import image1_5 from "../../public/images/ebook/1.5.jpg";
-import image1_6 from "../../public/images/ebook/1.6.jpg";
-import image1_7 from "../../public/images/ebook/1.7.jpg";
-import image1_8 from "../../public/images/ebook/1.8.jpg";
-import image1_9 from "../../public/images/ebook/1.9.jpg";
-import image1_10 from "../../public/images/ebook/1.10.jpg";
-import image1_11 from "../../public/images/ebook/1.11.jpg";
-import image1_12 from "../../public/images/ebook/1.12.jpg";
-import image1_13 from "../../public/images/ebook/1.13.jpg";
-import image1_14 from "../../public/images/ebook/1.14.jpg";
-import image1_15 from "../../public/images/ebook/1.15.jpg";
-import image1_16 from "../../public/images/ebook/1.16.jpg";
-import image1_17 from "../../public/images/ebook/1.17.jpg";
-import image1_18 from "../../public/images/ebook/1.18.jpg";
-import image1_19 from "../../public/images/ebook/1.19.jpg";
+import image1_1 from "images/ebook/1.1.jpg";
+import image1_2 from "images/ebook/1.2.jpg";
+import image1_3 from "images/ebook/1.3.jpg";
+import image1_4 from "images/ebook/1.4.jpg";
+import image1_5 from "images/ebook/1.5.jpg";
+import image1_6 from "images/ebook/1.6.jpg";
+import image1_7 from "images/ebook/1.7.jpg";
+import image1_8 from "images/ebook/1.8.jpg";
+import image1_9 from "images/ebook/1.9.jpg";
+import image1_10 from "images/ebook/1.10.jpg";
+import image1_11 from "images/ebook/1.11.jpg";
+import image1_12 from "images/ebook/1.12.jpg";
+import image1_13 from "images/ebook/1.13.jpg";
+import image1_14 from "images/ebook/1.14.jpg";
+import image1_15 from "images/ebook/1.15.jpg";
+import image1_16 from "images/ebook/1.16.jpg";
+import image1_17 from "images/ebook/1.17.jpg";
+import image1_18 from "images/ebook/1.18.jpg";
+import image1_19 from "images/ebook/1.19.jpg";
 
 
 

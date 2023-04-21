@@ -3,6 +3,8 @@ import { HeaderItems } from ".";
 import HeaderItem from "./header-item";
 import IntroFindMe from "components/intro/intro-find-me";
 import Icon from "components/common/icons";
+import Image from "next/image";
+import MyFaceImg from "images/me.jpg";
 
 type HeaderMobileMenuType = {
   onClose: () => void;
@@ -13,7 +15,7 @@ const HeaderMobileMenu = ({ onClose }: HeaderMobileMenuType) => (
     <div className="fixed top-0 left-0 z-1000 h-full w-90vw animate-mobile-menu bg-portfolio-bg p-5">
       <div className="flex items-center justify-between">
         <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full border-2 border-gray-400">
-          <img src="/images/me-face.JPG" alt="" />
+          <Image src={MyFaceImg} alt="" />
         </div>
         <div
           className="rounded-full bg-white bg-opacity-5 p-3"

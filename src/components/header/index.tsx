@@ -3,7 +3,10 @@ import { useAppContext } from "context/app-context";
 import Image from "next/image";
 import { FC, useEffect, useState } from "react";
 import HeaderItem, { HeaderItemType } from "./header-item";
-import HeaderMobileMenu from "./header-mobile-menu";
+import MyPicture from "images/me.jpg";
+import dynamic from "next/dynamic";
+
+const HeaderMobileMenu = dynamic(() => import("./header-mobile-menu"));
 
 export const HeaderItems: HeaderItemType[] = [
   {
@@ -58,11 +61,12 @@ const Header: FC = () => {
     >
       <div className="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-full border-2 border-gray-400">
         <Image
-          src="/images/me.jpg"
-          alt=""
+          src={MyPicture}
+          width={60}
+          height={60}
           layout="fill"
           objectFit="cover"
-          objectPosition="center"
+          alt=""
         />
       </div>
       <nav className="hidden items-center gap-10 lg:flex">

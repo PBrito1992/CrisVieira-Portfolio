@@ -8,7 +8,7 @@ type ContextBoxType = {
 
 const ContextBox: FC<ContextBoxType> = ({ className, children, onClick }) => (
   <div
-    className={`rounded-lg bg-brand text-gray-100 shadow-brand ${className}`}
+    className={`relative rounded-lg bg-brand text-gray-100 shadow-brand ${className}`}
     onClick={onClick}
   >
     {children}

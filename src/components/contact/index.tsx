@@ -2,7 +2,10 @@ import ContextBox from "components/common/context-box";
 import SectionTitle from "components/common/section-title";
 import SectionTitleHighlighted from "components/common/section-title-highlighted";
 import IntroFindMe from "components/intro/intro-find-me";
+import Image from "next/image";
 import { FC } from "react";
+import ContactImg from "images/contact1.png";
+import PdfImg from "images/pdf.png";
 
 const Contact: FC = () => {
   return (
@@ -15,11 +18,7 @@ const Contact: FC = () => {
         Contact with me
       </SectionTitleHighlighted>
       <ContextBox className="mt-10 flex flex-col gap-8 p-5 lg:flex-row lg:p-10">
-        <img
-          src="https://rainbowit.net/html/inbio/assets/images/contact/contact1.png"
-          alt=""
-          className="rounded-lg"
-        />
+        <Image src={ContactImg} alt="" className="rounded-lg" />
         <div className="text-xl font-semibold text-gray-300">
           <div className="text-2xl lg:text-4xl">Cristiana Vieira</div>
           <div className="mt-3 text-xl text-gray-400 lg:text-2xl">
@@ -43,7 +42,7 @@ const Contact: FC = () => {
             className="mt-6 block"
             download
           >
-            <img src="/images/pdf.png" alt="" width={30} />
+            <Image src={PdfImg} width={30} height={30} alt="" />
           </a>
           <div className="mt-6 text-base">
             <IntroFindMe />

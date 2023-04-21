@@ -1,5 +1,5 @@
 import { PortfolioItemType } from "components/portfolio/portfolio-item";
-import blogPostImage from '../../public/images/blog-post.jpg'
+import blogPostImage from 'images/blog-post.jpg'
 
 const blogPostsItems: PortfolioItemType[] = [
 

@@ -1,4 +1,8 @@
 import ContextBox from "components/common/context-box";
+import Image from "next/image";
+import AdobeI from "images/AdobeI.png";
+import AdobeP from "images/AdobeP.png";
+import Canva from "images/Canva.png";
 
 const IntroSkills = () => (
   <>
@@ -7,25 +11,13 @@ const IntroSkills = () => (
     </div>
     <div className="mt-3 flex gap-3">
       <ContextBox className="flex h-12 w-12 items-center justify-center lg:h-16 lg:w-16">
-        <img
-          className="w-6"
-          src="/images/AdobeI.png"
-          alt=""
-        />
+        <Image src={AdobeI} width={24} height={24} alt="" />
       </ContextBox>
       <ContextBox className="flex h-12 w-12 items-center justify-center lg:h-16 lg:w-16">
-        <img
-          className="w-6"
-          src="/images/AdobeP.png"
-          alt=""
-        />
+        <Image src={AdobeP} width={24} height={24} alt="" />
       </ContextBox>
       <ContextBox className="flex h-12 w-12 items-center justify-center lg:h-16 lg:w-16">
-        <img
-          src="/images/Canva.png"
-          alt=""
-          className="w-6"
-        />
+        <Image src={Canva} alt="" width={24} height={24} />
       </ContextBox>
     </div>
   </>

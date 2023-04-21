@@ -1,14 +1,14 @@
 import { PortfolioItemType } from "components/portfolio/portfolio-item";
-import image1_1 from "../../public/images/brochure/1.1.jpg";
-import image1_2 from "../../public/images/brochure/1.2.jpg";
-import image1_3 from "../../public/images/brochure/1.3.jpg";
-import image1_4 from "../../public/images/brochure/1.4.jpg";
-import image1_5 from "../../public/images/brochure/1.5.jpg";
-import image1_6 from "../../public/images/brochure/1.6.jpg";
-import image1_7 from "../../public/images/brochure/1.7.jpg";
-import image1_8 from "../../public/images/brochure/1.8.jpg";
-import image1_9 from "../../public/images/brochure/1.9.jpg";
-import image1_10 from "../../public/images/brochure/1.10.jpg";
+import image1_1 from "images/brochure/1.1.jpg";
+import image1_2 from "images/brochure/1.2.jpg";
+import image1_3 from "images/brochure/1.3.jpg";
+import image1_4 from "images/brochure/1.4.jpg";
+import image1_5 from "images/brochure/1.5.jpg";
+import image1_6 from "images/brochure/1.6.jpg";
+import image1_7 from "images/brochure/1.7.jpg";
+import image1_8 from "images/brochure/1.8.jpg";
+import image1_9 from "images/brochure/1.9.jpg";
+import image1_10 from "images/brochure/1.10.jpg";
 
 const brochureItems: PortfolioItemType[] = [
 
