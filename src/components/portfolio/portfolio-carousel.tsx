@@ -12,7 +12,11 @@ type PortfolioCarouselType = {
 
 const PortfolioCarousel: FC<PortfolioCarouselType> = ({ images }) => {
   if (typeof images?.[0] === "string" && images?.[0]?.endsWith(".mp4")) {
-    return <video src={images[0]} controls />;
+    return (
+      <div className="mx-auto h-[250px] w-[280px] overflow-hidden">
+        <video src={images[0]} controls className="h-auto w-full" />
+      </div>
+    );
   }
 
   return (
@@ -28,7 +32,15 @@ const PortfolioCarousel: FC<PortfolioCarouselType> = ({ images }) => {
     >
       {images.map((image, index) => (
         <SwiperSlide key={image.toString() + index}>
-          <Image src={image} alt="" priority={true} />
+          <figure className="flex items-center justify-center">
+            <Image
+              src={image}
+              alt=""
+              width={280}
+              height={250}
+              objectFit="contain"
+            />
+          </figure>
         </SwiperSlide>
       ))}
     </Swiper>

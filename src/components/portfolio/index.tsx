@@ -1,5 +1,6 @@
 import SectionTitle from "components/common/section-title";
 import SectionTitleHighlighted from "components/common/section-title-highlighted";
+import dynamic from "next/dynamic";
 import { FC, useState } from "react";
 import portfolioItems from "../../../content/portfolio";
 import PortfolioFilter, {
@@ -7,9 +8,9 @@ import PortfolioFilter, {
   PortfolioFilters,
 } from "./portfolio-filter";
 import PortfolioItem, { PortfolioItemType } from "./portfolio-item";
-import PortfolioItemPopup, {
-  PortfolioItemPopupType,
-} from "./portfolio-item-popup";
+import { PortfolioItemPopupType } from "./portfolio-item-popup";
+
+const PortfolioItemPopup = dynamic(() => import("./portfolio-item-popup"));
 
 export type PortfolioItem = {
   filterId: FiltersType;

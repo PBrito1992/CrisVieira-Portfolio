@@ -18,7 +18,9 @@ const Contact: FC = () => {
         Contact with me
       </SectionTitleHighlighted>
       <ContextBox className="mt-10 flex flex-col gap-8 p-5 lg:flex-row lg:p-10">
-        <Image src={ContactImg} alt="" className="rounded-lg" />
+        <figure>
+          <Image src={ContactImg} alt="" className="rounded-lg" />
+        </figure>
         <div className="text-xl font-semibold text-gray-300">
           <div className="text-2xl lg:text-4xl">Cristiana Vieira</div>
           <div className="mt-3 text-xl text-gray-400 lg:text-2xl">

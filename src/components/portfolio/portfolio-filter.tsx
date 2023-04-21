@@ -35,7 +35,7 @@ const PortfolioFilter = ({
         Portfolio Filter
       </label>
       <Select
-        id="portfolio-filter"
+        inputId="portfolio-filter"
         instanceId="portfolio-filter"
         className="w-full"
         classNamePrefix="react-select"
