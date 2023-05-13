@@ -3,6 +3,17 @@ import type { AppProps } from "next/app";
 import Layout from "components/layout";
 import AppContextProvider from "context/app-context";
 import Head from "next/head";
+import { storyblokInit, apiPlugin } from "@storyblok/react";
+
+storyblokInit({
+  accessToken: process.env.STORYBLOK_API_TOKEN,
+  use: [apiPlugin],
+  richText: {
+    resolver: (component, blok) => {
+      if (component === "portfolio_breaking_rule") return "<br />";
+    },
+  },
+});
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

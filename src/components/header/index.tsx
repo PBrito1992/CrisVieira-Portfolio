@@ -2,36 +2,18 @@ import Icon from "components/common/icons";
 import { useAppContext } from "context/app-context";
 import Image from "next/image";
 import { FC, useEffect, useState } from "react";
-import HeaderItem, { HeaderItemType } from "./header-item";
-import MyPicture from "images/me-rounded.png";
+import HeaderItem from "./header-item";
 import dynamic from "next/dynamic";
 
 const HeaderMobileMenu = dynamic(() => import("./header-mobile-menu"));
 
-export const HeaderItems: HeaderItemType[] = [
-  {
-    text: "Home",
-    linkRef: "#home",
-  },
-  {
-    text: "Skills",
-    linkRef: "#features",
-  },
-  {
-    text: "Portfolio",
-    linkRef: "#portfolio",
-  },
-  {
-    text: "Resume",
-    linkRef: "#resume",
-  },
-  {
-    text: "Contact",
-    linkRef: "#contact",
-  },
-];
+type THeader = {
+  blok: any;
+  findMeTitle: string;
+  findMeContacts: any[];
+};
 
-const Header: FC = () => {
+const Header: FC<THeader> = ({ blok, findMeTitle, findMeContacts }) => {
   const { layoutRef } = useAppContext();
   const [isOnTop, setIsOnTop] = useState(true);
   const [displayMenu, setDisplayMenu] = useState(false);
@@ -53,17 +35,17 @@ const Header: FC = () => {
 
   return (
     <header
-      className={`flex w-full items-center justify-between py-5 px-5 lg:px-20 ${
+      className={`flex w-full items-center justify-between px-5 py-5 lg:px-20 ${
         isOnTop
           ? ""
           : "fixed top-0 z-10 bg-portfolio-bg bg-opacity-90 shadow-xl"
       }`}
     >
       <div className="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-full border-2 border-gray-400">
-        <Image src={MyPicture} width={60} height={60} layout="fill" alt="" />
+        <Image src={blok?.image?.filename} width={60} height={60} alt="" />
       </div>
       <nav className="hidden items-center gap-10 lg:flex">
-        {HeaderItems.map((item) => (
+        {blok?.sections?.map((item: any) => (
           <HeaderItem key={item.text} {...item} />
         ))}
       </nav>
@@ -71,7 +53,13 @@ const Header: FC = () => {
         <Icon icon="burger" w={42} h={42} color="#be185d" />
       </span>
       {displayMenu && (
-        <HeaderMobileMenu onClose={() => setDisplayMenu(false)} />
+        <HeaderMobileMenu
+          headerSections={blok?.sections || []}
+          findMeTitle={findMeTitle}
+          findMeContacts={findMeContacts}
+          imageUrl={blok?.image?.filename}
+          onClose={() => setDisplayMenu(false)}
+        />
       )}
     </header>
   );

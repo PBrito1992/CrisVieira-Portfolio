@@ -1,3 +1,4 @@
+import { renderRichText, RichTextResolver } from "@storyblok/react";
 import Backdrop from "components/common/backdrop";
 import ContextBox from "components/common/context-box";
 import Icon from "components/common/icons";
@@ -13,7 +14,7 @@ export type PortfolioItemPopupType = {
   imgAlt?: string;
   feature: string;
   title?: string;
-  body?: string;
+  body?: any;
   onClose: () => void;
 };
 
@@ -25,6 +26,9 @@ const PortfolioItemPopup: FC<PortfolioItemPopupType> = ({
   body,
   onClose,
 }) => {
+  const parsedBody = renderRichText(body);
+  const hasBody = !(parsedBody === "<p></p>");
+
   return ReactDOM.createPortal(
     <Backdrop>
       <ContextBox className="h-auto max-h-screen w-full p-5 lg:relative lg:max-h-none lg:w-5/6 lg:p-10">
@@ -42,17 +46,17 @@ const PortfolioItemPopup: FC<PortfolioItemPopupType> = ({
             <div className="w-full lg:w-1/3">
               <PortfolioCarousel images={imgSrc} />
             </div>
-            {body && (
+            {hasBody && (
               <div className="lg:scrollbar-hidden w-full lg:max-h-90vh-minus-padding lg:w-2/3 lg:overflow-y-scroll">
                 <SectionTitle className=" text-pink-700">
                   {feature}
                 </SectionTitle>
-                <SectionTitleHighlighted className="mt-2 mb-4 text-lg text-gray-300 lg:text-2xl">
+                <SectionTitleHighlighted className="mb-4 mt-2 text-lg text-gray-300 lg:text-2xl">
                   {title}
                 </SectionTitleHighlighted>
                 <div
                   className="text-sm"
-                  dangerouslySetInnerHTML={{ __html: body }}
+                  dangerouslySetInnerHTML={{ __html: parsedBody }}
                 />
               </div>
             )}

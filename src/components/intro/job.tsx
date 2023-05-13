@@ -1,8 +1,12 @@
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
+
+type TJob = {
+  job: string;
+};
 
 const JobDescriptionWidth = 300;
 
-const Job = () => {
+const Job: FC<TJob> = ({ job }) => {
   const [jobDescriptionWidth, setJobDescriptionWidth] =
     useState(JobDescriptionWidth);
 
@@ -28,7 +32,7 @@ const Job = () => {
       style={{ width: jobDescriptionWidth }}
       className="overflow-hidden whitespace-nowrap"
     >
-      Digital Marketeer
+      {job}
     </span>
   );
 };

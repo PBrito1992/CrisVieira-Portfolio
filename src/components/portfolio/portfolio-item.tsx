@@ -16,25 +16,23 @@ const PortfolioItem: FC<PortfolioItemType> = ({
   imgAlt,
   title,
   onClick,
-}) => {
-  return (
-    <ContextBox className="flex cursor-pointer flex-col justify-between p-5">
+}) => (
+  <ContextBox className="flex cursor-pointer flex-col justify-between p-5">
+    <div>
       <div>
-        <div>
-          <PortfolioCarousel images={imgSrc} />
-        </div>
-        <div className="mt-3 text-base font-semibold text-gray-300">
-          {title}
-        </div>
+        <PortfolioCarousel images={imgSrc} />
       </div>
-      <button
-        className="context-box-animation h-12 w-full  rounded-lg bg-experience-color bg-opacity-50 font-semibold text-pink-700"
-        onClick={onClick}
-      >
-        Full Content
-      </button>
-    </ContextBox>
-  );
-};
+      <div className="mt-3 text-center text-base font-semibold text-gray-300">
+        {title}
+      </div>
+    </div>
+    <button
+      className="context-box-animation mt-4 h-12  w-full rounded-lg bg-experience-color bg-opacity-50 font-semibold text-pink-700"
+      onClick={onClick}
+    >
+      Full Content
+    </button>
+  </ContextBox>
+);
 
 export default PortfolioItem;

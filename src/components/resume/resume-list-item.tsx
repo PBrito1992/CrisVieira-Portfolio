@@ -1,50 +1,35 @@
 import ContextBox from "components/common/context-box";
 
-export type ResumeListItemType = {
-  title?: string;
-  location: string;
-  duration: {
-    start: string;
-    end?: string;
-  };
-  description?: string[];
-  grade?: string;
-};
-
-const ResumeListItem = ({
-  title,
-  location,
-  duration,
-  description,
-  grade,
-}: ResumeListItemType) => (
+const ResumeListItem = ({ ...item }: any) => (
   <div className="relative mt-8 w-full before:absolute before:top-4 before:block before:h-4 before:w-4 before:rounded-full before:border-4 before:border-experience-color before:bg-portfolio-bg after:absolute after:top-5.5 after:block after:h-1 after:w-7 after:bg-experience-color first:mt-0 odd:before:-left-10.5 odd:after:-left-7 even:before:-left-10.5 even:after:-left-7 hover:before:bg-pink-700 lg:even:right-resume-even-item lg:even:before:inset-x-unset lg:even:before:-right-10.5 lg:even:after:inset-x-unset lg:even:after:-right-7">
     <ContextBox className="context-box-animation p-10">
-      {title && (
-        <div className="text-2xl font-semibold text-gray-300">{title}</div>
+      {item?.title && (
+        <div className="text-2xl font-semibold text-gray-300">{item.title}</div>
       )}
       <div
         className={`${
-          title
+          item.title
             ? "mt-1 text-lg text-gray-400"
             : "text-2xl font-semibold text-gray-300"
         }`}
       >
-        {location}
+        {item.location}
       </div>
-      {description && description.length > 0 && (
+      {item?.description && item.description.length > 0 && (
         <ul className="ml-6 list-disc">
-          {description.map((item) => (
-            <li key={item} className="mt-2 text-sm text-gray-400">
-              {item}
+          {item.description.map((item: any, index: number) => (
+            <li key={index} className="mt-2 text-sm text-gray-400">
+              {item.text}
             </li>
           ))}
         </ul>
       )}
       <div className="mt-6 text-sm text-gray-400">
-        {duration.start} - {duration.end || "Current"}
+        {item.duration_start} - {item.duration_end || "Current"}
       </div>
-      {grade && <div className="mt-1 text-sm text-gray-400">{grade}</div>}
+      {item?.grade && (
+        <div className="mt-1 text-sm text-gray-400">{item.grade}</div>
+      )}
     </ContextBox>
   </div>
 );
