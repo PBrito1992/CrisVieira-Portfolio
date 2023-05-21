@@ -23,7 +23,7 @@ export default async function handler(req: any, res: any) {
     }
 
     try {
-        const revalidationRequests = [await res.revalidate(`/${full_slug}`)];
+        const revalidationRequests = [await res.revalidate(`/`)];
 
         await Promise.all(revalidationRequests);
         return res.status(200).json({ revalidated: true });
