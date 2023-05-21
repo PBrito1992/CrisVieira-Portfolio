@@ -3,7 +3,6 @@ const crypto = require('crypto');
 export default async function handler(req: any, res: any) {
     const {
         method,
-        body: { full_slug },
     } = req;
     const webhookSignature = req.headers['webhook-signature'];
 
@@ -27,7 +26,7 @@ export default async function handler(req: any, res: any) {
 
         await Promise.all(revalidationRequests);
         return res.status(200).json({ revalidated: true });
-    } catch (err) {
-        return res.status(500).send('Error revalidating');
+    } catch (err: any) {
+        return res.status(500).send('Error revalidating - ', err.message);
     }
 }
